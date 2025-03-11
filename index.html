@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting to app</title>
+  <script>
+    // Extract the link parameters
+    const url = window.location.href;
+    const redirectUrl = `stooppapp://signin?link=${encodeURIComponent(url)}`;
+    
+    // Redirect to the app
+    window.location.replace(redirectUrl);
+  </script>
+</head>
+<body>
+  <p>Redirecting to the app...</p>
+  <p>If you're not redirected automatically, <a href="#" id="deepLink">click here</a> to open the app.</p>
+  
+  <script>
+    document.getElementById('deepLink').href = redirectUrl;
+  </script>
+</body>
+</html>
