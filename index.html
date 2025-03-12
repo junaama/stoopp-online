@@ -6,7 +6,7 @@
   // Extract the link parameters
   const url = window.location.href;
   // Use stooppapp:// instead of stooppapp://signin
-  const redirectUrl = `http://stooppapp://?link=${encodeURIComponent(url)}`;
+  const redirectUrl = `stooppapp://?link=${encodeURIComponent(url)}`;
   
   // Redirect to the app
   window.location.replace(redirectUrl);
