@@ -2,14 +2,15 @@
 <html>
 <head>
   <title>Redirecting to app</title>
-  <script>
-    // Extract the link parameters
-    const url = window.location.href;
-    const redirectUrl = `stooppapp://signin?link=${encodeURIComponent(url)}`;
-    
-    // Redirect to the app
-    window.location.replace(redirectUrl);
-  </script>
+ <script>
+  // Extract the link parameters
+  const url = window.location.href;
+  // Use stooppapp:// instead of stooppapp://signin
+  const redirectUrl = `stooppapp://?link=${encodeURIComponent(url)}`;
+  
+  // Redirect to the app
+  window.location.replace(redirectUrl);
+</script>
 </head>
 <body>
   <p>Redirecting to the app...</p>
